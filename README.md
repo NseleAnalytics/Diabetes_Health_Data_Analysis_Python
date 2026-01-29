@@ -30,7 +30,7 @@ Patient-level health indicators including:
 - Outcome comparisons across clinical variables
 - Early risk identification
 
-[View thr SQL Reort here](https://github.com/NseleAnalytics/Diabetes_Health_Data_Analysis)
+[View the SQL Report here](https://github.com/NseleAnalytics/Diabetes_Health_Data_Analysis)
 
 ### 2️⃣ Python Analysis
 - Feature engineering: glucose, BMI, blood pressure categories
@@ -70,7 +70,7 @@ Glucose has the strongest positive correlation with diabetes outcome, followed b
 Bar plot of diabetes prevalence across BMI categories.  
 Higher BMI categories (overweight, obese) have significantly higher diabetes rates, supporting the link between adiposity and insulin resistance.
 
-![BMI vs Outcome](images/bmi_vs_outcome.png)
+![BMI vs Outcome](images/BMI_vs_Outcome.png)
 
 ---
 
@@ -78,7 +78,7 @@ Higher BMI categories (overweight, obese) have significantly higher diabetes rat
 Bar plot showing diabetes outcome across the engineered clinical risk groups (low, medium, high).  
 Prevalence increases progressively with risk group, confirming that cumulative metabolic indicators provide meaningful risk stratification.
 
-![Clinical Risk Group vs Outcome](images/risk_group_vs_outcome.png)
+![Clinical Risk Group vs Outcome](images/Clinical_Risk_Group_vs_Outcome.png)
 
 ---
 
