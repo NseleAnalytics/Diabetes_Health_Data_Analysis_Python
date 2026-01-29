@@ -78,7 +78,7 @@ Higher BMI categories (overweight, obese) have significantly higher diabetes rat
 Bar plot showing diabetes outcome across the engineered clinical risk groups (low, medium, high).  
 Prevalence increases progressively with risk group, confirming that cumulative metabolic indicators provide meaningful risk stratification.
 
-![Clinical Risk Group vs Outcome](images/Clinical_Risk_Group_vs_Outcome.png)
+![Clinical Risk Group vs Outcome](images/Risk_Group_vs_Outcome.png)
 
 ---
 
