@@ -1,93 +1,128 @@
-# Diabetes Health Data Analysis (Python)
+# 🩺 Diabetes Health Data Analysis — Python Project
 
-## Project Overview
-This project explores clinical and demographic factors associated with diabetes outcomes using a combined **SQL and Python workflow**. The goal is to identify metabolic risk patterns through feature engineering, exploratory data analysis, and summary statistics.
+## 📘 Overview
+This project explores a healthcare dataset focusing on **diabetes-related factors** such as glucose levels, BMI, blood pressure, insulin, pregnancies, and outcomes.  
 
-This notebook complements a SQL-based analysis I conducted, allowing me to visualize trends and summarize patterns more clearly. The idea was to translate the tabular insights from SQL into interpretable Python visualizations, which can guide clinical interpretation and decision-making.
+The goal was to uncover trends and correlations that could help understand **patient risk patterns, clinical outcomes, and possible health interventions** — all using **Python** for data analysis and visualization.  
 
----
-
-## Tools & Technologies
-- Python (pandas, matplotlib, seaborn)
-- Jupyter Notebook
----
-
-## Dataset
-Patient-level health indicators including:
-- Glucose
-- BMI
-- Blood Pressure
-- Age
-- Pregnancies
-- Diabetes Outcome
+Through this analysis, I applied **feature engineering**, **exploratory visual analysis**, and **clinical risk grouping** to transform raw numbers into actionable insights.  
 
 ---
 
-## Analysis Workflow
-
-### 1️⃣ SQL Analysis
-- Aggregations and group-based summaries
-- Outcome comparisons across clinical variables
-- Early risk identification
-
-[View the SQL Report here](https://github.com/NseleAnalytics/Diabetes_Health_Data_Analysis)
-
-### 2️⃣ Python Analysis
-- Feature engineering: glucose, BMI, blood pressure categories
-- Clinical risk group construction
-- Visual exploratory data analysis
-- Percentage-based summary tables
+## 🧰 Tools Used
+- **Python 3** – programming language  
+- **Jupyter Notebook** – interactive coding and analysis  
+- **pandas & numpy** – data manipulation and cleaning  
+- **matplotlib & seaborn** – visual exploration and plotting  
+- **GitHub** – for documentation, version control, and portfolio showcase  
 
 ---
 
-## Key Visualizations
+## 🧹 Step 1: Data Cleaning
+Imported the `diabetes.csv` dataset and prepared it for analysis.  
 
-### 1. Glucose Distribution
-Histogram showing the overall distribution of glucose levels in the dataset.  
-We can see most individuals are in the normal to prediabetic range, with a smaller group at higher glucose levels.
-
-![Glucose Distribution](images/glucose_distribution.png)
+- Replaced zero values in physiologically impossible columns (`Glucose`, `BloodPressure`, `SkinThickness`, `Insulin`, `BMI`) with `NaN` for accurate calculations.  
+- Ensured column names were correct and ready for analysis.  
 
 ---
 
-### 2. Glucose vs Diabetes Outcome
-Boxplot comparing glucose levels across diabetes outcomes.  
-The median and interquartile range are clearly higher for diabetic individuals, highlighting glucose as the most discriminative feature.
+## 📊 Step 2: Outcome Distribution
+Explored how many patients were classified as diabetic (`1`) or non-diabetic (`0`).  
 
-![Glucose vs Outcome](images/glucose_vs_outcome.png)
+- This provides a **baseline overview** of the dataset.  
 
 ---
 
-### 3. Correlation Heatmap
-Shows pairwise correlations between all clinical variables.  
-Glucose has the strongest positive correlation with diabetes outcome, followed by BMI and age.
+## 📈 Step 3: Glucose Level Distribution
+Grouped plasma glucose values into clinical **buckets** and calculated **both counts and diabetic percentages**.  
 
+- Revealed how **higher glucose levels correspond to increased diabetes prevalence**.  
+- Noted that some patients with **lower glucose (<100 and 100–125 mg/dL)** were still diabetic, showing **real-world variability in diagnosis**.  
+
+🖼️ *Visualization:*  
+![Glucose Histogram](images/glucose_histogram.png)
+
+---
+
+## ⚖️ Step 4: BMI Categories and Outcomes
+Categorized BMI into clinical ranges and analyzed diabetes prevalence within each category:  
+
+- **Normal:** BMI <25  
+- **Overweight:** 25 ≤ BMI <30  
+- **Obese:** BMI ≥30  
+
+Findings:  
+- Diabetes prevalence increases progressively from normal to obese.  
+- Obese group shows the **highest diabetic percentage**, aligning with epidemiological trends.  
+
+🖼️ *Visualization:*  
+![BMI vs Outcome](images/BMO_vs_Outcome.png)
+
+---
+
+## 💓 Step 5: Blood Pressure Analysis
+Categorized **systolic blood pressure** into risk levels:  
+
+- Normal, Elevated, High  
+- Explored associations with diabetes outcome  
+
+Findings:  
+- Alone, blood pressure is less predictive, but when combined with glucose and BMI into a **clinical risk group**, patterns become clear.  
+
+🖼️ *Visualization:*  
+![Blood Pressure vs Outcome](images/blood_pressure_vs_outcome.png)
+
+---
+
+## 🧩 Step 6: Clinical Risk Groups
+Created a **composite clinical risk feature** based on **glucose, BMI, and blood pressure**:  
+
+- **Low Risk:** All variables normal  
+- **Medium Risk:** One elevated indicator  
+- **High Risk:** Multiple elevated indicators  
+
+This allowed a **multi-variable analysis** of patient risk patterns and clarified which groups were more likely to be diabetic.  
+
+🖼️ *Visualization:*  
+![Risk Group vs Outcome](images/Risk_Group_vs_Outcome.png)
+
+---
+
+## 🖼️ Step 7: Correlation Heatmap
+Generated a heatmap to visualize **inter-variable relationships**:  
+
+- Highlighted strong correlations between **glucose and outcome**, **BMI and outcome**, and moderate correlations with blood pressure.  
+
+🖼️ *Visualization:*  
 ![Correlation Heatmap](images/correlation_heatmap.png)
 
 ---
 
-### 4. BMI vs Diabetes Outcome
-Bar plot of diabetes prevalence across BMI categories.  
-Higher BMI categories (overweight, obese) have significantly higher diabetes rates, supporting the link between adiposity and insulin resistance.
+## 🧮 Step 8: Summary Tables
+Calculated **percentage of diabetics** within:  
 
-![BMI vs Outcome](images/BMI_vs_Outcome.png)
+- Glucose buckets  
+- BMI categories  
+- Clinical risk groups  
+
+| Feature | Observation |
+|---------|------------|
+| Glucose | Higher ranges have higher diabetic percentages, but pre-diabetic range still shows diagnosed cases |
+| BMI | Obese category has the highest prevalence of diabetes |
+| Risk Group | High-risk group most predictive, but medium risk shows early warning signs |
 
 ---
 
-### 5. Clinical Risk Group vs Diabetes Outcome
-Bar plot showing diabetes outcome across the engineered clinical risk groups (low, medium, high).  
-Prevalence increases progressively with risk group, confirming that cumulative metabolic indicators provide meaningful risk stratification.
-
-![Clinical Risk Group vs Outcome](images/Risk_Group_vs_Outcome.png)
+## 🧠 Step 9: Key Insights
+- **Glucose is the strongest single indicator** of diabetes prevalence.  
+- **BMI contributes significantly**, especially in combination with elevated glucose.  
+- **Clinical Risk Grouping** reveals cumulative risk patterns not apparent from single variables.  
+- **Visual analysis confirms trends**, showing how Python allows quick exploration and interpretation of complex healthcare data.  
 
 ---
 
-## Key Findings
-- Glucose is strongly associated with diabetes outcome.
-- BMI exhibits a graded relationship with diabetes prevalence.
-- Blood pressure contributes to risk but is stronger when combined with other indicators in the clinical risk group.
-- The engineered clinical risk group captures cumulative metabolic burden effectively.
-- Visualizations and summary tables reinforce patterns observed in SQL analysis.
-
-## Author 
-**Nontuthuko Nsele**
+## 👩🏾‍🔬 About the Author
+**Nontuthuko Nsele**  
+Biomedical Scientist | Aspiring Clinical Data Analyst  
+Passionate about health research, data analytics, and improving patient outcomes.  
+🔗 [LinkedIn](https://linkedin.com/in/nontuthuko-nsele-50173012a)
