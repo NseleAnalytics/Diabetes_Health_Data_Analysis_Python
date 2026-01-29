@@ -40,7 +40,7 @@ Grouped plasma glucose values into clinical **buckets** and calculated **both co
 - Noted that some patients with **lower glucose (<100 and 100–125 mg/dL)** were still diabetic, showing **real-world variability in diagnosis**.  
 
 🖼️ *Visualization:*  
-![Glucose Histogram](images/glucose_histogram.png)
+![Glucose Histogram](images/glucose_distribution.png)
 
 ---
 
@@ -56,7 +56,7 @@ Findings:
 - Obese group shows the **highest diabetic percentage**, aligning with epidemiological trends.  
 
 🖼️ *Visualization:*  
-![BMI vs Outcome](images/BMO_vs_Outcome.png)
+![BMI vs Outcome](images/BMI_vs_Outcome.png)
 
 ---
 
