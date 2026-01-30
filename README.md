@@ -60,17 +60,16 @@ Findings:
 
 ---
 
-## 💓 Step 5: Blood Pressure Analysis
-Categorized **systolic blood pressure** into risk levels:  
-
-- Normal, Elevated, High  
-- Explored associations with diabetes outcome  
+## 📈 Step 5: Glucose Levels by Diabetes Outcome
+Visualized **glucose levels** for non-diabetic (0) and diabetic (1) patients:    
 
 Findings:  
-- Alone, blood pressure is less predictive, but when combined with glucose and BMI into a **clinical risk group**, patterns become clear.  
+- Non-diabetic patients mostly have glucose levels below ~125 mg/dL.  
+- Diabetic patients generally show higher glucose, but some overlap exists.  
+- This highlights **real-world variability in glucose levels and diagnosis**, providing a clear visual understanding of risk patterns.  
 
 🖼️ *Visualization:*  
-![Blood Pressure vs Outcome](images/blood_pressure_vs_outcome.png)
+![Glucose vs Outcome](images/glucose_vs_outcome.png)
 
 ---
 
@@ -78,8 +77,8 @@ Findings:
 Created a **composite clinical risk feature** based on **glucose, BMI, and blood pressure**:  
 
 - **Low Risk:** All variables normal  
-- **Medium Risk:** One elevated indicator  
-- **High Risk:** Multiple elevated indicators  
+- **Medium Risk:** All elevated indicators indicators but below threshold of Clinical Risk
+- **High Risk:** Multiple elevated indicators and above Clinical Risk threshold
 
 This allowed a **multi-variable analysis** of patient risk patterns and clarified which groups were more likely to be diabetic.  
 
