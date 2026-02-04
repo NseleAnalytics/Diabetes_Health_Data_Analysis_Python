@@ -33,27 +33,28 @@ Explored how many patients were classified as diabetic (`1`) or non-diabetic (`0
 
 ---
 
-## 📈 Step 3: Glucose Level Distribution
-Grouped plasma glucose values into clinical **buckets** and calculated **both counts and diabetic percentages**.  
+## 📈 Step 3: Glucose Level Distribution.
+Patients’ glucose levels were analysed to evaluate their distribution within the dataset.
 
-- Revealed how **higher glucose levels correspond to increased diabetes prevalence**.  
-- Noted that some patients with **lower glucose (<100 and 100–125 mg/dL)** were still diabetic, showing **real-world variability in diagnosis**.  
+- The histogram demonstrates a right-skewed distribution, indicating that most glucose readings cluster between 90 and 150 mg/dL, with fewer patients exhibiting extremely elevated glucose levels.
+- The concentration of patients within this range suggests that a substantial portion of the population may fall within elevated metabolic risk categories, highlighting the importance of continuous glucose monitoring, early screening, and preventative healthcare interventions.
 
 🖼️ *Visualization:*  
 ![Glucose Histogram](images/glucose_distribution.png)
 
 ---
 
-## ⚖️ Step 4: BMI Categories and Outcomes
-Categorized BMI into clinical ranges and analyzed diabetes prevalence within each category:  
+## ⚖️ Step 4: BMI  and Outcomes
+Visualized **BMI** for non-diabetic (0) and diabetic (1) patients
 
 - **Normal:** BMI <25  
 - **Overweight:** 25 ≤ BMI <30  
 - **Obese:** BMI ≥30  
 
 Findings:  
-- Diabetes prevalence increases progressively from normal to obese.  
-- Obese group shows the **highest diabetic percentage**, aligning with epidemiological trends.  
+- The boxplot shows that diabetic patients generally had higher BMI values than non-diabetic patients. The median BMI for diabetic patients was  higher than  median BMI for non-diabetic patients.
+- These results support existing research showing that higher BMI is strongly associated with increased risk of developing diabetes.
+
 
 🖼️ *Visualization:*  
 ![BMI vs Outcome](images/BMI_vs_Outcome.png)
