@@ -74,7 +74,7 @@ Findings:
 ---
 
 ## 🧩 Step 6: Clinical Risk Groups
-Created a **composite clinical risk feature** based on **glucose, BMI, and blood pressure**:  
+Created a **composite clinical risk feature** based on **Diabetic Outcome**:  
 
 - **Low Risk:** All variables normal  
 - **Medium Risk:** All elevated indicators indicators but below threshold of Clinical Risk
